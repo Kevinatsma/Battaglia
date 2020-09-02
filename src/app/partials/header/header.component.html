@@ -1,0 +1,59 @@
+<section #topNav id="topNav" [ngClass]="menuClasses"
+	*ngIf="(menuClasses$ | async) as menuClasses">
+	<div class="navigation__menu-btn">
+		<button name="Menu button" aria-label="Click to open menu">
+			<app-menu-icon (click)="toggleMenu()" [menuActive]="menuActive$"
+				[blackMenu$]="blackMenu$ | async"></app-menu-icon>
+		</button>
+	</div>
+	<div class="navigation__logo" [class.active]="(menuActive$ | async)">
+		<a (click)="goToHome()" aria-label="Link to home">
+			<img src="./../../../../assets/img/logo.svg"
+				 alt="White Battaglia logo" draggable="false"
+				 [class.hidden]="(blackMenu$ | async)" />
+			<img src="./../../../../assets/img/logo_black.svg"
+				 alt="Black Battaglia logo" draggable="false"
+				 [class.hidden]="!(blackMenu$ | async)" />
+		</a>
+    </div>
+	<nav class="navigation__social" [class.active]="(menuActive$ | async)">
+		<a href="#" class="icon-btn"
+			aria-label="Link to Instagram profile" target="_blank" rel="noopener">
+			<i class="fab fa-instagram"></i>
+		</a>
+		<a href="#" class="icon-btn not-mobile" aria-label="Link to Whatsapp profile" target="_blank" rel="noopener">
+			<i class="fab fa-whatsapp"></i>
+		</a>
+		<a href="#" class="profile-pic" aria-label="Account that is logged in"
+			*ngIf="auth?.user$ | async as user" title="{{user?.displayName}}"
+			[style.background-image]="'url(' + user?.photoURL + ')'">
+		</a>
+	</nav>
+</section>
+
+<section class="menu-overlay" [class.active]="(menuActive$ | async)">
+	<nav class="menu">
+		<ul class="menu__list" data-offset="10">
+			<li class="menu__list-item" data-offset="16">
+				<a class="text-link" [routerLink]="['/']" (click)="toggleMenu()">
+					Home
+				</a>
+			</li>
+			<li class="menu__list-item" data-offset="16">
+				<a class="text-link" [routerLink]="['/shop']" (click)="toggleMenu()">
+					Shop
+				</a>
+			</li>
+			<li class="menu__list-item" data-offset="16">
+				<a class="text-link" [routerLink]="['/blog']" (click)="toggleMenu()">
+					Blog + Ideas
+				</a>
+			</li>
+			<li class="menu__list-item" data-offset="16">
+				<a class="text-link" [routerLink]="['/about-us']" (click)="toggleMenu()">
+					About Battaglia
+				</a>
+			</li>
+		</ul>
+	</nav>
+</section>

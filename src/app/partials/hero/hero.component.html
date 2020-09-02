@@ -1,0 +1,11 @@
+<div class="hero__container {{classes}} hero" id="hero" [style.height]="height + 'vh'"
+    [style.background-image]="'url(' + image + ')'">
+    <div class="hero__container-content" *ngIf="heroTitle && scrollButtonActive">
+        <h1 class="subheader">{{heroTitle}}</h1>
+    </div>
+    <button class="scroll-down" *ngIf="scrollButtonActive"
+        (click)="scrollDown($event, sectionToScrollTo)">
+        <img src="./../../../assets/icon/arrow-down__white.svg"
+             alt="Arrow down icon" draggable="false"/>
+    </button>
+</div>

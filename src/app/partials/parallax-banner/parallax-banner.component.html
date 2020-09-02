@@ -1,0 +1,18 @@
+<div class="parallax-banner" id="parallax" #parallaxBanner>
+    <div class="layer__content">
+        <h2 class="banner-slogan" *ngIf="bannerSlogan">
+            <!-- <img src="./../../../assets/icons/quotes.svg"> -->
+            {{bannerSlogan}}
+            <!-- <img src="./../../../assets/icons/quotes.svg"> -->
+        </h2>
+        <button class="btn-secondary icon white" (click)="goToAboutUs()"
+            aria-label="Go to about us page">
+            Over ons
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+    <div class="layer__background" *ngIf="image"
+        [style.background-image]="'url(' + imageURL + ')'">
+    </div>
+</div>
+

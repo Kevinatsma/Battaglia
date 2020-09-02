@@ -1,0 +1,7 @@
+<main class="page-wrapper">
+  <section class="header" *ngIf="headerActive">
+      <app-header></app-header>
+  </section>
+  <router-outlet (activate)="onActivate($event)" class="main-outlet">
+  </router-outlet>
+</main>

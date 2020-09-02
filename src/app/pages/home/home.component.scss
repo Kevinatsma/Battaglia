@@ -1,0 +1,22 @@
+@import './../../../assets/scss/config';
+@import './../../../assets/scss/animations';
+@import './../../../assets/scss/mixins';
+
+#home-page {
+    background-color: $white-2;
+
+    section {
+        display: flex;
+        width: 100vw;
+    }
+
+    .hero {
+        height: 100vh;
+        overflow: hidden;
+
+        app-hero {
+            height: inherit;
+            width: inherit;
+        }
+    }
+}

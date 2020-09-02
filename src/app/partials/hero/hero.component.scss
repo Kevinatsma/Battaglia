@@ -1,0 +1,77 @@
+@import './../../../assets/scss/animations';
+@import './../../../assets/scss/config';
+@import './../../../assets/scss/extends';
+@import './../../../assets/scss/mixins';
+
+.hero {
+    &__container {
+        background-position: 90% 45%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing: border-box;
+        flex-flow: column nowrap;
+        padding: 2em 3em 4em;
+        width: 100%;
+        z-index: $z-base;
+        @extend %flex-center;
+        @include image-overlay();
+
+        @include respond-down($md-m) {
+            background-size: cover;
+            background-position: center;
+        }
+
+        @include respond-down($sm-m) {
+            background-position: center;
+            background-size: cover;
+            padding: 1em 2em 4em;
+            height: 100vh !important;
+        }
+
+        > * {
+            z-index: $z-menu-overlay;
+        }
+
+        &.detail {
+            @include respond-up($xl) {
+                height: 91vh !important;
+            }
+        }
+
+        &-content {
+            margin-top: auto;
+
+            h1.subheader {
+                color: $grey-8;
+                font-weight: $light;
+                text-transform: uppercase;
+            }
+        }
+
+        .scroll-down {
+            animation: slide-down-appear .3s;
+            background: transparent;
+            border: none;
+            display: flex;
+            height: 50px;
+            margin-top: auto;
+            width: 50px;
+
+            @include scrollDownbutton();
+
+            @include respond-down($md-m) {
+                height: 45px;
+                width: 45px;
+            }
+            @include respond-down($md) {
+                height: 40px;
+                width: 40px;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

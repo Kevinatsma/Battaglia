@@ -1,0 +1,93 @@
+@import './config';
+@import './mixins';
+
+.form-container {
+    &__section {
+        background-color: transparent;
+        border: 1px solid $grey-3;
+        border-radius: 5px;
+        height: 100%;
+        padding: 2em 3em;
+        margin: 2em 0 1em;
+        width: 100%;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            color: $grey-7;
+            font-weight: $semi-bold;
+            @include rem(font-size, 22px);
+        }
+    }
+
+    &.dark-form {
+        form {
+            ::ng-deep mat-form-field {
+                width: 100%;
+                
+                &.mat-focused {
+                    .mat-form-field-underline {
+                        background-color: red;
+                    }
+                }
+    
+                .mat-form-field-underline {
+                    background: $grey-3;
+                }
+    
+                input, input::placeholder, textarea, textarea::placeholder {
+                    color: darken($white, 10%);
+                    margin: 20px 0;
+                    @include rem(font-size, 18px);
+                }
+    
+                textarea {
+                    min-height: 150px;
+                }
+    
+                .mat-form-field-label {
+                    color: darken($white, 10%);
+                    top: 40px;
+                    transition: all .25s ease-out-sine;
+                    @include rem(font-size, 18px);
+                }
+    
+                &.large-placeholder {
+                    .mat-form-field-label {
+                        @include rem(font-size, 28px);
+                    }
+    
+                    input, input::placeholder {
+                        @include rem(font-size, 28px);
+                    }
+                }
+    
+                &.mat-form-field-should-float {
+                    input, textarea {
+                        caret-color: $primary-color;
+                    }
+                    .mat-form-field-label {
+                        color: $grey-3;
+                        @include rem(font-size, 16px);
+                    }
+    
+                    .mat-form-field-underline {
+                        background-color: lighten($black, 25%);
+                    }
+                }
+    
+                .mat-form-field-underline {
+                    .mat-form-field-ripple {
+                        background-color: lighten($black, 25%) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mat-placeholder-required {
+    display: none;
+}

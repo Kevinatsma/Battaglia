@@ -1,0 +1,375 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import './assets/scss/global';
+
+html,
+body {
+	background-color: $white-2;
+	height: auto;
+	margin: 0;
+	max-width: 100vw;
+    overflow-x: hidden;
+	padding: 0;
+	width: 100vw;
+
+	* {
+		box-sizing: border-box;
+	}
+
+	app-root {
+		display: flex;
+		max-width: 100vw;
+		width: 100vw;
+	}
+
+	.page-wrapper {
+		max-width: 100vw;
+		overflow-x: hidden;
+		width: 100%;
+	}
+
+	///////////////////////////
+	// Titles & text
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: $black;
+		font-family: $main-font;
+		letter-spacing: 1.5px;
+		margin: 0;
+		padding: 0;
+
+		&.section-title {
+			font-weight: $light;
+			text-transform: uppercase;
+
+			&.white {
+				color: $white;
+			}
+		}
+	}
+
+	p, span {
+		color: $black;
+		font-family: $main-font;
+		letter-spacing: 1px;
+		line-height: 2em;
+		@include rem(font-size, $fs-base);
+
+		@include respond-down($lg) {
+			@include rem(font-size, 9px);
+		}
+		@include respond-down($md) {
+			@include rem(font-size, 10px);
+		}
+	}
+
+	h1 {
+		@include rem(font-size, $fs-1);
+
+		@include respond-down($md-m) {
+			@include rem(font-size, 26px);
+		}
+		@include respond-down($sm) {
+			@include rem(font-size, 24px);
+		}
+	}
+
+	h2 {
+		@include rem(font-size, $fs-2);
+		@include respond-down($sm) {
+			@include rem(font-size, 18px);
+		}
+	}
+
+	h3 {
+		@include rem(font-size, $fs-3);
+		@include respond-down($lg) {
+			@include rem(font-size, 14px);
+		}
+
+		&.item-title {
+			color: $black-2;
+			font-weight: $regular;
+
+			&.white {
+				color: $white;
+			}
+		}
+	}
+
+	///////////////////////////
+	// Lists
+
+	ul {
+		li {
+			list-style: none;
+		}
+	}
+
+	///////////////////////////
+	// Links and Buttons
+
+	a,
+	button {
+		font-family: $main-font;
+
+		&:hover,
+		&:focus {
+			outline: 0;
+		}
+	}
+
+	a {
+		color: $black;
+		text-decoration: none;
+		font-weight: $semi-bold;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		@include rem(font-size, $fs-base);
+
+		&.border-animation {
+			letter-spacing: 1px;
+			position: relative;
+
+			&::after {
+				border-bottom: 1.2px solid transparent;
+				border-radius: .5px;
+				bottom: -5px;
+				content: "";
+				height: 1px;
+				pointer-events: none;
+				position: absolute;
+				right: 0;
+				transition: all .3s ease-in-out;
+				width: 0;
+			}
+
+			&.g1 {
+				&::after {
+					background: $secondary-color;
+				}
+			}
+
+			&.g2 {
+				&::after {
+					background: $l-gradient-2;
+				}
+			}
+
+			&.g3 {
+				&::after {
+					background: $l-gradient-3;
+				}
+			}
+
+			&.g4 {
+				&::after {
+					background: $l-gradient-4;
+				}
+			}
+
+			&:hover,
+			&:focus {
+				&::after {
+					left: 0;
+					opacity: 1;
+					pointer-events: none;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	button {
+		background: none;
+		border: none;
+		outline: none;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+		@include rem(font-size, 11px);
+
+		&.btn-secondary {
+			border: 2px solid $black;
+			color: $black;
+			cursor: pointer;
+			font-weight: $semi-bold;
+			padding: 15px 50px;
+			transition: all .3s ease-in-out;
+
+			@include respond-down($md) {
+				padding: 12px 50px;
+			}
+
+			&:hover {
+				border: 2px solid $black;
+				font-weight: $semi-bold;
+			}
+
+			&.icon {
+				@include flex(center, center, row, nowrap);
+
+				i {
+					height: 12px;
+					margin: 0 0 0 15px;
+					position: relative;
+					top: -1px;
+					transform: translateX(0);
+					transition: transform .3s ease-in-out;
+					width: 12px;
+				}
+
+				&:hover {
+					i {
+						transform: translateX(30px);
+					}
+				}
+			}
+
+			&.white {
+				border: 2px solid $white;
+				color: $white;
+
+				i {
+					fill: $white;
+				}
+			}
+		}
+	}
+
+	a, button {
+		font-family: $main-font;
+
+		&.text-link {
+			background: none;
+			border: none;
+			outline: none;
+
+			&::after {
+				background: $black;
+				bottom: -9px;
+				content: '';
+				height: 3px;
+				right: 10%;
+				position: absolute;
+				width: 0;
+				transition: all .33s ease;
+			}
+
+			&:hover {
+				&::after {
+					left: 10%;
+					width: 80%;
+				}
+			}
+		}
+	}
+
+	///////////////////////////
+	///////////////////////////
+	// Dialogs
+
+	.mat-dialog-container {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		width: 100%;
+	}
+
+	.fullscreen-dialog {
+		height: 100vh;
+		max-width: 100vw !important;
+		width: 100vw;
+	}
+
+	.input-dialog {
+		height: auto;
+		width: 60vh;
+	}
+
+	.dark-dialog {
+		.mat-dialog-container {
+			background-color: $black;
+		}
+	}
+}
+
+///////////////////////////
+///////////////////////////
+// Responsive
+
+.not-mobile {
+	@include respond-down($sm-m) {
+		display: none !important;
+	}
+}
+
+///////////////////////////
+///////////////////////////
+// Cards
+  
+mat-card {
+display: flex;
+flex-flow: column nowrap;
+justify-content: flex-start;
+
+	&.dark-card {
+		background-color: $grey-1;
+		box-shadow: $card-shadow-dark !important;
+	}
+
+	&.list-card {
+		background-color: $grey-2;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: $list-card-height;
+		transition: all .25s ease-in-out;
+		width: $list-card-width;
+
+		&:hover {
+		cursor: pointer;
+		transform: scale(1.02);
+		}
+	}
+}
+
+///////////////////////////
+///////////////////////////
+// Layout
+
+.fullscreen-container {
+    background-color: $asphalt;
+    height: 100vh;
+    width: 100vw;
+    @extend %flex-center;
+
+    span {
+        color: $white-2;
+    }
+}
+
+///////////////////////////
+///////////////////////////
+// Misc
+
+.hidden {
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	width: 0;
+	z-index: $z-negative;
+}
+
+.dividing-line {
+	background-image: url('./assets/img/dividing-line.png');
+	background-repeat: repeat-x;
+	height: 8px;
+	margin: 1em 0;
+	overflow: visible;
+	width: 96%;
+}

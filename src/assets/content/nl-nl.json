@@ -1,0 +1,42 @@
+
+{
+    "content": {
+        "home": {
+
+        },
+        "activities": [
+            {
+                "title": "Private fine dining",
+                "icon": "fine-dining.svg",
+                "slug": "fine_dining",
+                "alt": "Fine Dining",
+                "short_description":
+                    "Bij private fine dining moet u denken aan een op maat gemaakt diner, waarvan u kunt genieten in uw eigen privé sferen."
+            },
+            {
+                "title": "Private fine dining",
+                "icon": "fine-dining.svg",
+                "slug": "fine_dining",
+                "alt": "Fine Dining",
+                "short_description":
+                    "Van een volledig verzorgde vergaderlunch tot een zakelijk of feestelijk diner, bedrijfsborrel, workshops of koken op locatie. Niets is onmogelijk bij BRUUR Culinair."
+            },
+            {
+                "title": "Private fine dining",
+                "icon": "fine-dining.svg",
+                "slug": "fine_dining",
+                "alt": "Fine Dining",
+                "short_description":
+                    "Chefkok Guido stelt op uw voorkeur een hoogstaand menu samen waarbij de combinatie tussen diner en wijn perfect op elkaar aan zullen sluiten."
+            },
+            {
+                "title": "Private fine dining",
+                "icon": "fine-dining.svg",
+                "slug": "fine_dining",
+                "alt": "Fine Dining",
+                "short_description":
+                    "Bij private fine dining moet u denken aan een op maat gemaakt diner, waarvan u kunt genieten in uw eigen privé sferen."
+            }
+        ]
+    }
+}

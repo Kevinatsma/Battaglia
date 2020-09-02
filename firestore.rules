@@ -1,0 +1,19 @@
+rules_version = "2"
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      allow read: if isSignedIn();
+      allow write: if isSignedIn();
+    }
+    
+    match /content/{contentId} {
+      allow read;
+      allow write, delete: if isSignedIn() && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.roles.admin == true;
+    }
+  }
+  
+  function isSignedIn() {
+      return request.auth != null;
+  }
+}

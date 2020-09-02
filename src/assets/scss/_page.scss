@@ -1,0 +1,58 @@
+@import './config';
+
+.page-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    height: auto;
+    max-width: 100vw;
+    overflow-x: hidden;
+    width: 100vw;
+
+    section {
+        &.header {
+            animation: slide-down-appear 1s;
+            background-color: transparent;
+            height: $header-height;
+            left: 0;
+            position: fixed;
+            right:  0;
+            top: 0;
+            z-index: $z-menu-overlay;
+        }
+    }
+}
+
+.page {
+    display: flex;
+    max-width: 100vw;
+
+    &.vertical {
+        flex-flow: column nowrap;
+        overflow-x: hidden;
+    }
+
+    &.horizontal {
+        flex-flow: row nowrap;
+        overflow-y: hidden;
+    }
+
+    section {
+        &.hero {
+            height: calc(100vh - #{$header-height});
+        }
+    }
+    
+    &__section {
+        height: 100vh;
+        width: 100vw;
+        @extend %flex-center;
+
+        &:nth-child(odd) {
+            background-color: $black;
+
+            h1 {
+                color: $white;
+            }
+        }
+    }
+}

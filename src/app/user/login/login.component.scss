@@ -1,0 +1,48 @@
+@import './../../../assets/scss/config';
+@import './../../../assets/scss/mixins';
+@import './../../../assets/scss/extends';
+
+.main-wrapper {
+    box-sizing: border-box;
+    height: calc(100vh - #{$header-height});   
+    margin: $header-height 0 0;
+    overflow: hidden;
+    width: 100vw;
+    @extend %flex-center;
+
+    @include respond-down($sm) {
+        height: calc(100vh - #{$header-height-s});
+        margin: $header-height-s 0 0;
+    }
+
+    .login-container {
+        background-color: $white;
+        box-shadow: $card-shadow;
+        box-sizing: border-box;
+        flex-direction: column;
+        margin: auto;
+        padding: 4em 3em;
+        width: 50%;
+        @extend %flex-center;
+
+        &__btn {
+            border: 1px solid $black;
+            border-radius: 8px;
+            color: $black;
+            font-size: 16px;
+            margin: 20px 0 0;
+            padding: 12px 24px;
+            @include flex();
+
+            img {
+                margin: 0 30px 0 0;
+            }
+
+            &:hover {
+                background: $black;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+}
