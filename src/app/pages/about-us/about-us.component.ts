@@ -41,7 +41,7 @@ export class AboutUsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   setPageTitle() {
-    this.titleService.setTitle('Asecan | About Us');
+    this.titleService.setTitle('Battaglia | About Us');
   }
 
   setMetaDescription() {

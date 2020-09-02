@@ -41,7 +41,7 @@ export class BlogComponent implements OnInit {
   }
 
   setPageTitle() {
-    this.titleService.setTitle('Asecan | Blog');
+    this.titleService.setTitle('Battaglia | Blog');
   }
 
   setMetaDescription() {

@@ -76,7 +76,7 @@ export class HeaderComponent implements OnInit {
         this.headerService.menuActive$.next(false);
         this.utils.smoothScroll(target, '', true);
       }
-    }, 200);
+    }, 100);
   }
 
   checkIfTransparent() {

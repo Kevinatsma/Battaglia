@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   setPageTitle() {
-    this.titleService.setTitle('Asecan | Home');
+    this.titleService.setTitle('Battaglia | Home');
   }
 
   setMetaDescription() {

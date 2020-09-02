@@ -1,5 +1,5 @@
 {
-  "name": "asecan",
+  "name": "battaglia",
   "version": "1.0.0",
   "private": true,
   "description": "Example project from an angular.io guide.",
@@ -10,12 +10,12 @@
     "test": "ng test",
     "lint": "tslint ./src/**/*.ts -t verbose",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run asecan:serve-ssr",
-    "prerender": "ng run asecan:prerender",
+    "dev:ssr": "ng run battaglia:serve-ssr",
+    "prerender": "ng run battaglia:prerender",
     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
-    "build:client-and-server-bundles": "ng build --prod && gzip-all \"dist/browser/*.*\" && ng run asecan:server:production --bundleDependencies none",
+    "build:client-and-server-bundles": "ng build --prod && gzip-all \"dist/browser/*.*\" && ng run battaglia:server:production --bundleDependencies none",
     "dev": "npm run build:client-and-server-bundles && npm run compile:server && npm run serve:ssr"
   },
   "keywords": [],

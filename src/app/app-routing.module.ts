@@ -7,6 +7,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { LoginComponent } from './user/login/login.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { BlogComponent } from './pages/blog/blog.component';
+import { FindUsComponent } from './pages/find-us/find-us.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/', pathMatch: 'full'},
@@ -29,6 +30,11 @@ const routes: Routes = [
     path: 'about-us',
     component: AboutUsComponent,
     data: { state: 'Website - About us' }
+  },
+  {
+    path: 'find-us',
+    component: FindUsComponent,
+    data: { state: 'Website - Find us' }
   },
   {
     path: 'login',

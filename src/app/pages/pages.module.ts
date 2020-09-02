@@ -6,10 +6,12 @@ import { PartialsModule } from '../partials/partials.module';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ShopModule } from './shop/shop.module';
 import { BlogModule } from './blog/blog.module';
+import { FindUsComponent } from './find-us/find-us.component';
 
 const COMPONENTS = [
   HomeComponent,
-  AboutUsComponent
+  AboutUsComponent,
+  FindUsComponent
 ];
 
 @NgModule({

@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import * as _ from 'lodash';
+import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { HeaderService } from '../../shared/services/header.service';
 import { UtilsService } from '../../shared/utils/utils.service';
+import * as _ from 'lodash';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-shop',
-  templateUrl: './shop.html',
-  styleUrls: ['./shop.scss']
+  selector: 'app-find-us',
+  templateUrl: './find-us.component.html',
+  styleUrls: ['./find-us.component.scss']
 })
-export class ShopComponent implements OnInit {
-  heroImage = 'hero-shop.jpg';
+export class FindUsComponent implements OnInit, AfterViewInit, OnDestroy {
+  heroImage = 'hero-find-us.jpg';
 
   constructor( private headerService: HeaderService,
                private utils: UtilsService,
@@ -41,13 +41,13 @@ export class ShopComponent implements OnInit {
   }
 
   setPageTitle() {
-    this.titleService.setTitle('Battaglia | Shop');
+    this.titleService.setTitle('Battaglia | Find Us');
   }
 
   setMetaDescription() {
     this.meta.updateTag({
       name: 'description',
-      content: `test content`
+      content: `content`
     });
   }
 

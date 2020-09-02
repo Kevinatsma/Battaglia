@@ -58,7 +58,7 @@ $split-color: $l-gradient-5;
 			}
 			@include respond-down($xs) {
 				top: 0;
-				width: 260px;
+				width: 130px;
 			}
 		}
 	}
@@ -117,10 +117,10 @@ $split-color: $l-gradient-5;
 		@include respond-down($sm) {
 			left: 5px;
 			top: 0;
-			width: 300px;
+			width: 120px;
 		}
 		@include respond-down($xs) {
-			width: 300px;
+			width: 120px;
 		}
 
 		img {
@@ -130,14 +130,11 @@ $split-color: $l-gradient-5;
 
 		&.active {
 			top: 40px !important;
-			width: 140px !important;
+			width: 120px !important;
 
-			@include respond-down($md) {
-				width: 240px !important;
-			}
 			@include respond-down($sm) {
-				top: 5px !important;
-				width: 360px !important;
+				top: 20px !important;
+				width: 170px !important;
 			}
 		}
 
@@ -264,10 +261,18 @@ $split-color: $l-gradient-5;
 		border-radius: 0;
 		height: 100vh;
 		opacity: 1;
-		padding: $pd-desktop;
+		padding: 20vh 80px 120px;
 		pointer-events: all;
 		width: 100%;
 		z-index: $z-base;
+
+		@include respond-down($md) {
+			padding: 20vh 32px 80px;
+		}
+
+		@include respond-down($sm) {
+			padding: 20vh 16px 60px;
+		}
 	}
 
 	.menu {
@@ -276,6 +281,10 @@ $split-color: $l-gradient-5;
 		max-height: 70vh;
 		width: 50%;
 		@extend %flex-center;
+
+		@include respond-down($sm) {
+			width: 90%;
+		}
 
 		&__list {
 			display: flex;
