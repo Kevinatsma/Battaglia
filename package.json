@@ -15,7 +15,7 @@
     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
-    "build:client-and-server-bundles": "ng build --prod && gzip-all \"dist/browser/*.*\" && ng run battaglia:server:production --bundleDependencies none",
+    "build:client-and-server-bundles": "ng build --prod && gzip-all \"dist/browser/*.*\" && ng run battaglia:server:production",
     "dev": "npm run build:client-and-server-bundles && npm run compile:server && npm run serve:ssr"
   },
   "keywords": [],
@@ -43,7 +43,7 @@
     "@nguniversal/module-map-ngfactory-loader": "^8.2.6",
     "angular-in-memory-web-api": "~0.11.0",
     "express": "^4.15.2",
-    "firebase": "^7.15.5",
+    "firebase": "^7.19.1",
     "rxjs": "~6.5.4",
     "ts-loader": "^8.0.0",
     "zone.js": "~0.10.3"

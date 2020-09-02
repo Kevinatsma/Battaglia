@@ -1,13 +1,13 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyBmuIWVrKLxL76sUEyqS_gWNN1uCE-lj1o",
-    authDomain: "battaglia-dev.firebaseapp.com",
-    databaseURL: "https://battaglia-dev.firebaseio.com",
-    projectId: "battaglia-dev",
-    storageBucket: "battaglia-dev.appspot.com",
-    messagingSenderId: "539827685936",
-    appId: "1:539827685936:web:ca18d2b830e988ee31fbf5",
-    measurementId: "G-RH3R2LJL55"
+    apiKey: "AIzaSyAcu3414mu2z59kax0O7C_5c49fjChvuFw",
+    authDomain: "battaglia-red.firebaseapp.com",
+    databaseURL: "https://battaglia-red.firebaseio.com",
+    projectId: "battaglia-red",
+    storageBucket: "battaglia-red.appspot.com",
+    messagingSenderId: "186575748840",
+    appId: "1:186575748840:web:329c8e56845a793be4935d",
+    measurementId: "G-1PPC5WJEQP"
   }
 };
