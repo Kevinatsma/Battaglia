@@ -51,14 +51,15 @@ $split-color: $l-gradient-5;
 
 	&:not(.non-transparent) {
 		.navigation__logo {
-			top: 55px;
+			top: 35px;
+			width: 120px;
 
 			@include respond-down($sm) {
 				top: 5px;
 			}
 			@include respond-down($xs) {
 				top: 0;
-				width: 130px;
+				width: 260px;
 			}
 		}
 	}
@@ -103,7 +104,7 @@ $split-color: $l-gradient-5;
 		position: relative;
 		top: 10px;
 		transition: all .25s ease-in-out;
-		width: 150px;
+		width: 250px;
 		z-index: $z-menu-overlay;
 
 		@extend %flex-center;
@@ -117,10 +118,10 @@ $split-color: $l-gradient-5;
 		@include respond-down($sm) {
 			left: 5px;
 			top: 0;
-			width: 120px;
+			width: 300px;
 		}
 		@include respond-down($xs) {
-			width: 120px;
+			width: 300px;
 		}
 
 		img {
@@ -129,12 +130,11 @@ $split-color: $l-gradient-5;
 		}
 
 		&.active {
-			top: 40px !important;
-			width: 120px !important;
+			top: 30px !important;
+			width: 130px !important;
 
 			@include respond-down($sm) {
-				top: 20px !important;
-				width: 170px !important;
+				top: 5px !important;
 			}
 		}
 
@@ -206,7 +206,14 @@ $split-color: $l-gradient-5;
 		.navigation {
 			&__logo {
 				top: 0;
-				width: 80px;
+				width: 85px;
+
+				@include respond-down($md) {
+					width: 190px;
+				}
+				@include respond-down($sm) {
+					width: 230px;
+				}
 			}
 
 			&__social {
@@ -261,18 +268,10 @@ $split-color: $l-gradient-5;
 		border-radius: 0;
 		height: 100vh;
 		opacity: 1;
-		padding: 20vh 80px 120px;
+		padding: $pd-desktop;
 		pointer-events: all;
 		width: 100%;
 		z-index: $z-base;
-
-		@include respond-down($md) {
-			padding: 20vh 32px 80px;
-		}
-
-		@include respond-down($sm) {
-			padding: 20vh 16px 60px;
-		}
 	}
 
 	.menu {
@@ -281,10 +280,6 @@ $split-color: $l-gradient-5;
 		max-height: 70vh;
 		width: 50%;
 		@extend %flex-center;
-
-		@include respond-down($sm) {
-			width: 90%;
-		}
 
 		&__list {
 			display: flex;

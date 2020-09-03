@@ -1,5 +1,5 @@
 {
-  "name": "battaglia",
+  "name": "asecan",
   "version": "1.0.0",
   "private": true,
   "description": "Example project from an angular.io guide.",
@@ -10,12 +10,12 @@
     "test": "ng test",
     "lint": "tslint ./src/**/*.ts -t verbose",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run battaglia:serve-ssr",
-    "prerender": "ng run battaglia:prerender",
+    "dev:ssr": "ng run asecan:serve-ssr",
+    "prerender": "ng run asecan:prerender",
     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
-    "build:client-and-server-bundles": "ng build --prod && gzip-all \"dist/browser/*.*\" && ng run battaglia:server:production",
+    "build:client-and-server-bundles": "ng build --prod && gzip-all \"dist/browser/*.*\" && ng run asecan:server:production --bundleDependencies none",
     "dev": "npm run build:client-and-server-bundles && npm run compile:server && npm run serve:ssr"
   },
   "keywords": [],
@@ -43,7 +43,7 @@
     "@nguniversal/module-map-ngfactory-loader": "^8.2.6",
     "angular-in-memory-web-api": "~0.11.0",
     "express": "^4.15.2",
-    "firebase": "^7.19.1",
+    "firebase": "^7.15.5",
     "rxjs": "~6.5.4",
     "ts-loader": "^8.0.0",
     "zone.js": "~0.10.3"

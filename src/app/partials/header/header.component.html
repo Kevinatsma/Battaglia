@@ -9,10 +9,10 @@
 	<div class="navigation__logo" [class.active]="(menuActive$ | async)">
 		<a (click)="goToHome()" aria-label="Link to home">
 			<img src="./../../../../assets/img/logo.svg"
-				 alt="White Battaglia logo" draggable="false"
+				 alt="White Bruur Culinair logo" draggable="false"
 				 [class.hidden]="(blackMenu$ | async)" />
 			<img src="./../../../../assets/img/logo_black.svg"
-				 alt="Black Battaglia logo" draggable="false"
+				 alt="Black Bruur Culinair logo" draggable="false"
 				 [class.hidden]="!(blackMenu$ | async)" />
 		</a>
     </div>
@@ -46,7 +46,7 @@
 			</li>
 			<li class="menu__list-item" data-offset="16">
 				<a class="text-link" [routerLink]="['/blog']" (click)="toggleMenu()">
-					Stories
+					Blog
 				</a>
 			</li>
 			<li class="menu__list-item" data-offset="16">

@@ -20,7 +20,7 @@ import { PartialsModule } from './partials/partials.module';
 
 @NgModule({
   imports: [
-    BrowserModule.withServerTransition({ appId: 'battaglia' }),
+    BrowserModule.withServerTransition({ appId: 'asecan' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
