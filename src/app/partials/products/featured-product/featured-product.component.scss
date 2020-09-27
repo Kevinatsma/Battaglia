@@ -1,0 +1,53 @@
+@import './../../../../assets/scss/config';
+@import './../../../../assets/scss/mixins';
+
+#featured-product {
+    height: 100vh;
+    overflow-x: auto;
+    width: 100%;
+
+    @include flex(flex-start, center, row, nowrap);
+
+    .f-product-slide {
+        height: 100vh;
+        position: relative;
+        width: 100vw;
+
+        @include flex(flex-start, center, row, nowrap);
+
+        .side-info {
+            height: 100%;
+            width: 20%;
+
+            @include flex(flex-start, flex-start, column, nowrap);
+
+            &__top {
+                height: 75%;
+                position: relative;
+                width: 100%;
+
+                h1 {
+                    transform: rotate(-90deg);
+                    position: absolute;
+                    bottom: 50%;
+                    right: 0;
+                    left: 0;
+                }
+            }
+
+            &__bottom {
+                border-top: 1px solid $black;
+                height: 25%;
+                width: 100%;
+            }
+        }
+
+        .right {
+            position: absolute;
+            height: fit-content;
+            width: 20%;
+            right: 0;
+            top: 0;
+        }
+    }
+}

@@ -35,10 +35,10 @@ export class HeaderComponent implements OnInit {
   }
 
   initObservables() {
-    combineLatest(
+    combineLatest([
       this.headerService.menuActive$,
       this.headerService.menuClasses$
-    ).pipe(
+    ]).pipe(
       takeUntil(this.destroy$)
     ).subscribe(([menuActive, classes]) => {
       this.setMenuValue(menuActive);

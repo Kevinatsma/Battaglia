@@ -1,5 +1,5 @@
-<main class="page-wrapper">
-  <section class="header" *ngIf="headerActive">
+<main class="page-wrapper" (window:scroll)="onScroll($event)">
+  <section id="header" class="header" *ngIf="headerActive">
       <app-header></app-header>
   </section>
   <router-outlet (activate)="onActivate($event)" class="main-outlet">

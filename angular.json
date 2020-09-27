@@ -30,7 +30,16 @@
               "src/styles.scss",
               "src/assets/fonts/fonts.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "rxjs-compat",
+              "@firebase/app",
+              "@firebase/auth",
+              "firebase",
+              "@firebase/firestore",
+              "lodash",
+              "core-js/modules/es.regexp.exec"
+            ]
           },
           "configurations": {
             "production": {

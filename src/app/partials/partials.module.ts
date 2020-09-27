@@ -11,6 +11,7 @@ import { ParallaxBannerComponent } from './parallax-banner/parallax-banner.compo
 import { FooterComponent } from './footer/footer.component';
 import { HeroComponent } from './hero/hero.component';
 import { ContentBlockComponent } from './content-block/content-block.component';
+import { ProductsModule } from './products/products/products.module';
 
 const COMPONENTS = [
   HeaderComponent,
@@ -28,8 +29,12 @@ const COMPONENTS = [
     CommonModule,
     RouterModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    ProductsModule
   ],
-  exports: [...COMPONENTS]
+  exports: [
+    ...COMPONENTS,
+    ProductsModule
+  ]
 })
 export class PartialsModule { }
