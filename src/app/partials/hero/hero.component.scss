@@ -5,7 +5,7 @@
 
 .hero {
     &__container {
-        background-position: 90% 45%;
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         box-sizing: border-box;
@@ -18,11 +18,9 @@
 
         @include respond-down($md-m) {
             background-size: cover;
-            background-position: center;
         }
 
         @include respond-down($sm-m) {
-            background-position: center;
             background-size: cover;
             padding: 1em 2em 4em;
             height: 100vh !important;
