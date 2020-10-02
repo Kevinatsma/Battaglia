@@ -11,6 +11,7 @@
 
     .f-product-slide {
         height: 100vh;
+        overflow: hidden;
         position: relative;
         width: 50%;
 
@@ -50,10 +51,12 @@
 
                 span {
                     font-family: $title-font;
-                    font-size: 46px;
-                    line-height: 70px;
+                    font-weight: $regular;
+                    line-height: 5rem;
                     width: 100%;
                     word-break: break-all;
+
+                    @include rem(font-size, 36px);
                 }
             }
         }

@@ -4,8 +4,10 @@ import { MaterialModule } from './../../shared/material.module';
 import { HomeService } from './home.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ShopBannerTwoComponent } from './shop-banner-two/shop-banner-two.component';
+import { ShopBannerOneComponent } from './shop-banner-one/shop-banner-one.component';
 
 const COMPONENTS = [
+  ShopBannerOneComponent,
   ShopBannerTwoComponent
 ];
 

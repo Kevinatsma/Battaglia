@@ -1,0 +1,119 @@
+@import './../../../../assets/scss/config';
+@import './../../../../assets/scss/mixins';
+
+.shopping-banner-one {
+    background-color: #7F2817;
+    height: 100vh;
+    padding: 6em 60px;
+    width: 100vw;
+
+    @include flex(flex-start, center, row, nowrap);
+
+    &__flag {
+        margin: 0 0 0 auto;
+
+        .circle {
+            border-radius: 50%;
+            height: 22px;
+            margin: 0 0 20px;
+            width: 22px;
+
+            &:first-child {
+                background-color: #F7BF5F;
+            }
+
+            &:nth-child(2) {
+                background-color: #7A9CBB;
+            }
+
+            &:last-child {
+                background-color: #BF1719;
+            }
+        }
+    }
+
+    &__curvy-text {
+        height: 100%;
+        margin: 0 40px;
+        position: relative;
+        width: 37%;
+        z-index: 5;
+
+        @include flex(center, flex-start, column, nowrap);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__images {
+        height: 90%;
+        position: relative;
+        width: 35%;
+
+        @include flex(flex-start, flex-end, column, nowrap);
+
+        h2 {
+            color: $white;
+            font-weight: $regular;
+            margin: 0 0 10px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .image-container {
+            height: 100%;
+            position: relative;
+            width: 100%;            
+
+            &::before {
+                background-color: $grey;
+                content: '';
+                background-image: url('./../../../../assets/img/partials/shop-banner-1/sub-img-bg.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 100%;
+                position: absolute;
+                left: -30%;
+                top: -10%;
+                width: 112%;
+                z-index: 1;
+            }
+
+            &__img {
+                height: 100%;
+                overflow: hidden;
+                width: 100%;
+
+                img {
+                    height: 100%;
+                    min-width: 100%;
+                    position: relative;
+                    width: auto;
+                    z-index: 5;
+                }
+            }
+        }
+    }
+
+    &__subtitle {
+        height: 90%;
+        margin: 0 auto 0 30px;
+        width: 40px;
+
+        h2 {
+            color: $white;
+            height: 100%;
+            text-align: center;
+            width: 100%;
+            word-break: break-all;
+            margin: -6px 0 0 0;
+
+            @include rem(line-height, 44px);
+
+            &::first-letter {
+                line-height: 0;
+            }
+        }
+    }
+}
