@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-root',
@@ -14,29 +15,17 @@ export class AppComponent {
   constructor(private router: Router) {
   }
 
-  onScroll(event) {
-    console.log(event);
+  onScroll = _.throttle((e) => {
     const currentScrollPos = window.pageYOffset;
     if (this.prevScrollPos > currentScrollPos) {
-      document.getElementById("header").style.top = "0";
-      console.log('top nav 0', document.getElementById("topNav"));
-    } else {
       setTimeout(() => {
-        document.getElementById("header").style.top = "-150px";
-        console.log('top nav min vijftig', document.getElementById("topNav"));
+        document.getElementById("header").style.transform = "translateY(0)";
       }, 1000);
+    } else {
+      document.getElementById("header").style.transform = "translateY(-150px)";
     }
     this.prevScrollPos = currentScrollPos;
-  }
-
-  // listenToRouteChange() {
-  //   this.router.events.subscribe((evt) => {
-  //     if (!(evt instanceof NavigationEnd)) {
-  //         return;
-  //     }
-  //     window.scrollTo(0, 0);
-  // });
-  // }
+  });
 
   onActivate(e) {
     if (document.body) {
