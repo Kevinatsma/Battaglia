@@ -1,0 +1,52 @@
+@import './../../../../assets/scss/config';
+@import './../../../../assets/scss/mixins';
+
+.shopping-banner {
+    background-image: url('./../../../../assets/img/backgrounds/shop-banner-2/shop-banner-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+
+    @include flex(flex-start, flex-start, row, nowrap);
+
+    &__left {
+        height: 100%;
+        width: 50%;
+
+        @include flex(center, center);
+
+        .image-container {
+            border-radius: 50%;
+            height: 90%;
+            overflow: hidden;
+            width: 80%;
+
+            @include flex(center, center);
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+    }
+
+    &__right {
+        height: 100%;
+        padding: 9em;
+        width: 50%;
+
+        @include flex(center, center, column, nowrap);
+
+        .banner-text {
+            color: $white;
+            font-family: $title-font;
+            margin: 0 0 20px;
+            opacity: 0.8;
+            text-align: justify;
+            
+            @include rem(font-size, 22px);
+        }
+    }
+}
