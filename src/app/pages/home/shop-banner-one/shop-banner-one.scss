@@ -4,6 +4,7 @@
 .shopping-banner-one {
     background-color: #7F2817;
     height: 100vh;
+    min-height: 100vh;
     padding: 6em 60px;
     width: 100vw;
 
@@ -36,7 +37,7 @@
         height: 100%;
         margin: 0 40px;
         position: relative;
-        width: 37%;
+        width: 30%;
         z-index: 5;
 
         @include flex(center, flex-start, column, nowrap);
@@ -49,7 +50,7 @@
     &__images {
         height: 90%;
         position: relative;
-        width: 35%;
+        width: 30%;
 
         @include flex(flex-start, flex-end, column, nowrap);
 
@@ -109,7 +110,7 @@
             word-break: break-all;
             margin: -6px 0 0 0;
 
-            @include rem(line-height, 44px);
+            @include rem(line-height, 40px);
 
             &::first-letter {
                 line-height: 0;

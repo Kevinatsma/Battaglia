@@ -1,0 +1,18 @@
+@import './../../../../assets/scss/config';
+@import './../../../../assets/scss/mixins';
+
+.horizontal-slider {
+    height: 100vh;
+    overflow-x: auto;
+    width: 100vw;
+
+    @include flex(flex-start, center, row, nowrap);
+
+    &__slide {
+        height: 100vh;
+        min-width: 100vw;
+        width: 100vw;
+
+        @include flex(flex-start, center, row, nowrap);
+    }
+}

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import * as _ from 'lodash';
 
 @Component({
@@ -12,8 +12,7 @@ export class AppComponent {
   headerActive = true;
   prevScrollPos = 0;
 
-  constructor(private router: Router) {
-  }
+  constructor(private router: Router) {}
 
   onScroll = _.throttle((e) => {
     const currentScrollPos = window.pageYOffset;
@@ -25,7 +24,7 @@ export class AppComponent {
       document.getElementById("header").style.transform = "translateY(-150px)";
     }
     this.prevScrollPos = currentScrollPos;
-  });
+  }, 500);
 
   onActivate(e) {
     if (document.body) {
@@ -35,6 +34,5 @@ export class AppComponent {
     } else {
       console.log('no document body');
     }
-
   }
 }

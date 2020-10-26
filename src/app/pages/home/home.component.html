@@ -1,4 +1,4 @@
-<main cdkScrollable class="page vertical" id="home-page">
+<main cdkScrollable class="page vertical" id="home-page" (window:wheel)="checkScroll($event)">
     <section class="hero">
         <app-hero [image]="heroImage" [sectionToScrollTo]="'featured-product'"></app-hero>
     </section>
@@ -6,7 +6,7 @@
         <app-featured-product></app-featured-product>
     </section>
     <section class="page__section" id="video-banner">
-        <h1>About Battaglia</h1>
+        <app-home-about-section></app-home-about-section>
     </section>
     <section class="page__section" id="story">
         <app-shop-banner-one></app-shop-banner-one>

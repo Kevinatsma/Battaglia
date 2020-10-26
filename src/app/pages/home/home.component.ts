@@ -1,9 +1,7 @@
-import { Component, OnInit, OnDestroy, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import * as _ from 'lodash';
 import { UtilsService } from './../../shared/utils/utils.service';
 import { HeaderService } from './../../shared/services/header.service';
-import { take } from 'rxjs/operators';
-import { ElementInView } from './../../shared/models/general.model';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
@@ -60,6 +58,11 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       content: `Content`
     });
   }
+
+  checkScroll = _.throttle((e) => {
+    // console.log('scrolling', e);
+    // TODO - section scroll on scroll down/up (100vh each time);
+  });
 
   ngOnDestroy() {
     window.removeEventListener('scroll', _.throttle(this.headerService.observeScroll, this.throttleDelay), true);

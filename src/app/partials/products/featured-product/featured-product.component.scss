@@ -57,6 +57,10 @@
                     word-break: break-all;
 
                     @include rem(font-size, 36px);
+
+                    @include respond-up($xl) {
+                        @include rem(font-size, 46px);
+                    }
                 }
             }
         }
@@ -88,17 +92,17 @@
                     }
 
                     &:nth-child(2) {
-                        left: 45%;
+                        left: 50%;
                     }
 
                     &:nth-child(3) {
-                        left: 65%;
+                        left: 70%;
                     }
 
                     &:last-child {
                         font-size: 40px;
                         font-weight: $regular;
-                        left: 100%;
+                        left: 110%;
                     }
                 }
             }
