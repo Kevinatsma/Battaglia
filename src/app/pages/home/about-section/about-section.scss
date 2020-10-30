@@ -3,10 +3,11 @@
 
 .horizontal-slider {
     height: 100vh;
-    overflow-x: auto;
+    overflow-x: scroll;
     width: 100vw;
 
     @include flex(flex-start, center, row, nowrap);
+    @include scrollSnap(start, x);
 
     &__slide {
         height: 100vh;

@@ -12,6 +12,17 @@
   justify-content: $justify;
 }
 
+@mixin scrollSnap($snap-align: start, $direction: y) {
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: $direction mandatory;
+
+  section,
+  .scroll-section {
+    scroll-snap-align: $snap-align;
+  }
+}
+
 
 ////////////////////////////
 ////////////////////////////

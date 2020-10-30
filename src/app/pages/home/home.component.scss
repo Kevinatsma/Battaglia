@@ -4,10 +4,12 @@
 
 #home-page {
     background-color: $white-2;
+    @include scrollSnap();
 
     &.page {
         &__section {
             height: 100vh;
+            min-height: 100vh;
             overflow: hidden;
             width: 100vw;
         }
@@ -15,6 +17,7 @@
 
     .hero {
         height: 100vh;
+        min-height: 100vh;
         overflow: hidden;
 
         app-hero {
